@@ -57,5 +57,28 @@ public class ClientService {
 		clientRepository.deleteById(id);
     }
 	
+	
+	private void checkClient(String nom, String telephone, String email, String ville) throws Exception {
+        // vérification du nom complet qui ne peut pas être infèrieur à 2 caractères
+        if (nom.length() < 2){
+            throw new Exception("nom complet invalide");
+        }
+
+        // telephone supèrieur à 9 et infèrieur à 16 caractères
+        if (telephone.length() > 9 && telephone.length() < 15){
+            throw new Exception("Le numéro doit contenir 10 chiffres avec espaces ou tirets");
+        }
+
+        // l'email doit être supèrieur à 2 caractères
+        if (email.length() < 2){
+            throw new Exception("Votre email est invalide");
+        }
+
+        // la ville doit être supèrieur à 2 caractères
+        if (ville.length() < 2){
+            throw new Exception("Votre ville est invalide");
+        }
+    }
+	
 
 }

@@ -54,7 +54,7 @@ public class HotelController {
 	public ResponseEntity<Hotel> add(@RequestBody  Hotel hotel) {
 		
 		try {
-			Hotel c = hotelService.add(hotel.getNom(),hotel.getEmail(), hotel.getTelephone(), hotel.getAdresse());
+			Hotel c = hotelService.add(hotel.getNom(), hotel.getEtoiles(), hotel.getAdresse(), hotel.getTelephone(), hotel.getEmail(), hotel.getVille());
 			URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
 					.path("/{id}")
 					.buildAndExpand(c.getId())
@@ -69,7 +69,7 @@ public class HotelController {
 	@PutMapping(path = "", produces = "application/json")
 	public ResponseEntity<Hotel> edit(@RequestBody  Hotel hotel, @PathVariable("id") Integer id ) {
 		try {
-			Hotel c = hotelService.edit(id, hotel.getNom(),hotel.getEmail(), hotel.getTelephone(), hotel.getAdresse());
+			Hotel c = hotelService.edit(id, hotel.getNom(), hotel.getEtoiles(), hotel.getAdresse(), hotel.getTelephone(), hotel.getEmail(), hotel.getVille());
 			return ResponseEntity.ok().body(c);
 		} catch (Exception e) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());

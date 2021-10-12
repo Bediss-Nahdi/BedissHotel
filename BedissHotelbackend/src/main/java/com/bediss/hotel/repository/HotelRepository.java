@@ -10,5 +10,7 @@ import com.bediss.hotel.entities.Hotel;
 public interface HotelRepository extends CrudRepository<Hotel, Integer>{
 
 	Iterable<Hotel> findByNomContainsOrVilleContains(String search, String search2);
+	
+	Hotel findByVille(String ville);
 
 }

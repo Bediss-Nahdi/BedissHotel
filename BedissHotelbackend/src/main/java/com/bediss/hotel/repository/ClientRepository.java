@@ -11,5 +11,7 @@ import com.bediss.hotel.entities.Client;
 public interface ClientRepository extends CrudRepository<Client, Integer>{
 
 	Iterable<Client> findByNomCompletContainsOrEmailContains(String search, String search2);
+	
+	Client findByEmail(String email);
 
 }
