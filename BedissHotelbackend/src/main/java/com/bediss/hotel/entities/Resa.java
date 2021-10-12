@@ -43,8 +43,7 @@ public class Resa {
 	private int numeroChambre;
 
 	
-	
-	
+
 	public Resa() {
 	}
 
