@@ -11,7 +11,12 @@ import java.util.Collection;
 import java.util.List;
 
 public class UserDetailsImpl implements UserDetails {
-    private Admin admin;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private Admin admin;
     public UserDetailsImpl(Admin admin){
         this.admin = admin;
     }
