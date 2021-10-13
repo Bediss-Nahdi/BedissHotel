@@ -1,7 +1,6 @@
 package com.bediss.hotel.apricontroller;
 
 import java.net.URI;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 

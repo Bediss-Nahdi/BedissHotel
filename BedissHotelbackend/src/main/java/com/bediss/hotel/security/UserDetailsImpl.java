@@ -11,10 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class UserDetailsImpl implements UserDetails {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+
 	
 	private Admin admin;
     public UserDetailsImpl(Admin admin){
@@ -27,7 +24,7 @@ public class UserDetailsImpl implements UserDetails {
         return authorities;
     }
 
-    public Admin getUser() {
+    public Admin getAdmin() {
         return admin;
     }
 

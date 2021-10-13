@@ -18,7 +18,7 @@ public class ClientService {
 			return clientRepository.findAll();
 		}else {
 			return clientRepository.findByNomCompletContainsOrEmailContains(search, search);
-		}
+	}
     }
 	
 	
